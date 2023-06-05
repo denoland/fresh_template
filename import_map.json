@@ -1,12 +1,21 @@
 {
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.1.5/",
-    "preact": "https://esm.sh/preact@10.13.1",
-    "preact/": "https://esm.sh/preact@10.13.1/",
-    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.6",
-    "@preact/signals": "https://esm.sh/*@preact/signals@1.1.3",
-    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
-    "twind": "https://esm.sh/twind@0.16.19",
-    "twind/": "https://esm.sh/twind@0.16.19/"
+    "@preact/signals-core": "https://esm.sh/v124/@preact/signals-core@1.2.3",
+    "@preact/signals": "https://esm.sh/v124/*@preact/signals@1.1.3",
+    "preact-render-to-string": "https://esm.sh/v124/*preact-render-to-string@5.2.6",
+    "preact-render-to-string/": "https://esm.sh/v124/*preact-render-to-string@5.2.6/",
+    "preact": "https://esm.sh/v124/preact@10.13.2",
+    "preact/": "https://esm.sh/v124/preact@10.13.2/",
+    "twind": "https://esm.sh/v124/*twind@0.16.19",
+    "twind/": "https://esm.sh/v124/*twind@0.16.19/"
+  },
+  "scopes": {
+    "https://esm.sh/v124/": {
+      "csstype": "https://esm.sh/v124/csstype@3.1.2",
+      "htmlparser2": "https://esm.sh/v124/htmlparser2@6.1.0",
+      "pretty-format": "https://esm.sh/v124/pretty-format@3.8.0",
+      "style-vendorizer": "https://esm.sh/v124/style-vendorizer@2.2.3"
+    }
   }
 }
