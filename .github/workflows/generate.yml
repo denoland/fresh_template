@@ -1,9 +1,10 @@
-name: Daily Deno Update
+name: Daily Fresh template update
 
 on:
   schedule:
     # Runs every day at 15:42 UTC
     - cron: '42 15 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
