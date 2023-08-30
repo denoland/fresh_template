@@ -1,0 +1,35 @@
+name: Daily Deno Update
+
+on:
+  schedule:
+    # Runs every day at 15:42 UTC
+    - cron: '42 15 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout main branch
+      uses: actions/checkout@v2
+      with:
+        ref: main
+
+    - name: Install Deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+
+    - name: Clean the directory
+      run: git rm -rf .
+
+    - name: Run Fresh init script
+      run: deno run -A https://fresh.deno.dev
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git commit -m "Init" || echo "No changes to commit"
+        git push origin main
