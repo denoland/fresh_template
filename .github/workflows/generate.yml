@@ -25,7 +25,7 @@ jobs:
       run: git rm -rf .
 
     - name: Run Fresh init script
-      run: deno run -A https://fresh.deno.dev
+      run: deno run -A https://fresh.deno.dev --vscode .
 
     - name: Commit changes
       run: |
