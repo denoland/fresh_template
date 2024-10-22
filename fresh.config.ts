@@ -1,6 +1,7 @@
 import { defineConfig } from "$fresh/server.ts";
-import twindPlugin from "$fresh/plugins/twind.ts"
+import twind from "$fresh/plugins/twindv1.ts";
 import twindConfig from "./twind.config.ts";
+
 export default defineConfig({
-  plugins: [twindPlugin(twindConfig)]
+  plugins: [twind(twindConfig)],
 });
